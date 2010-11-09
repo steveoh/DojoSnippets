@@ -1,0 +1,25 @@
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+ <CodeSnippet Format="1.1.0">
+   <Header>
+     <SnippetTypes>
+       <SnippetType>Expansion</SnippetType>
+     </SnippetTypes>
+     <Title>dojo: Insert dojo.require statement</Title>
+     <Author>Steve Gourley (@steveAGRC)</Author>
+     <Shortcut>dojoRequire</Shortcut>
+     <HelpUrl>http://dojotoolkit.org</HelpUrl>
+   </Header>
+   <Snippet>
+     <Declarations>
+       <Literal>
+         <ID>module</ID>
+         <ToolTip>Module namespace being required</ToolTip>
+         <Default>dijit.</Default>
+       </Literal>
+     </Declarations>
+     <Code Language="jscript">
+       <![CDATA[dojo.require("$module$");]]>
+     </Code>
+   </Snippet>
+ </CodeSnippet>
+</CodeSnippets>
