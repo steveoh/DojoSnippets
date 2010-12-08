@@ -1,0 +1,72 @@
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>dojo: Create a new templated class template.</Title>
+      <Author>Steve Gourley (@steveAGRC)</Author>
+      <Shortcut>djClassTemplated</Shortcut>
+      <HelpUrl>http://dojotoolkit.org</HelpUrl>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>inherit</ID>
+          <ToolTip>Inherited Classes</ToolTip>
+          <Default>dijit._Widget, dijit._Tempalted</Default>
+        </Literal>
+        <Literal>
+          <ID>namespace</ID>
+          <ToolTip>Namespace</ToolTip>
+          <Default>namespace</Default>
+        </Literal>
+        <Literal>
+          <ID>class</ID>
+          <ToolTip>Class Name</ToolTip>
+          <Default>namespace.MyClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="jscript">
+        <![CDATA[dojo.provide('$namespace$.$class$');
+      
+dojo.declare('$namespace$.$class$', [$inherit$], {
+    // summary:
+    // example:
+    
+    //must be true if you have dijits in your template string
+    widgetsInTemplate: true,
+
+    //location of widget template
+    templateString: dojo.cache("$namespace$.", "templates/$class$Template.htm"),
+
+    //Your constructor method will be called before the parameters are mixed into the widget, 
+    //and can be used to initialize arrays, etc.
+    constructor: function (params) {
+        console.log(this.declaredClass + "::" + arguments.callee.nom);
+        dojo.safeMixin(params);
+    },
+    
+    //If you provide a postMixInProperties method for your widget, 
+    //it will be invoked before rendering occurs, and before any dom nodes are created. 
+    //If you need to add or change the instance's properties before the widget is rendered - 
+    //this is the place to do it.
+    postMixinProperties: function()
+    {
+        console.log(this.declaredClass + "::" + arguments.callee.nom);
+        this.inherited(arguments);
+    }, 
+    
+    //This is typically the workhorse of a custom widget. 
+    //The widget has been rendered (but note that sub-widgets in the containerNode have not!). 
+    //The widget though may not be attached to the DOM yet so you shouldn't do
+    //any sizing calculations in this method.
+    postCreate: function () {
+        console.log(this.declaredClass + "::" + arguments.callee.nom);
+        this.inherited(arguments);
+   }
+});]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
