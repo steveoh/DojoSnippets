@@ -44,14 +44,13 @@ dojo.declare('$namespace$.$class$', [$inherit$], {
     //and can be used to initialize arrays, etc.
     constructor: function (params) {
         console.log(this.declaredClass + "::" + arguments.callee.nom);
-        dojo.safeMixin(params);
     },
     
     //If you provide a postMixInProperties method for your widget, 
     //it will be invoked before rendering occurs, and before any dom nodes are created. 
     //If you need to add or change the instance's properties before the widget is rendered - 
     //this is the place to do it.
-    postMixinProperties: function()
+    postMixInProperties: function()
     {
         console.log(this.declaredClass + "::" + arguments.callee.nom);
         this.inherited(arguments);
