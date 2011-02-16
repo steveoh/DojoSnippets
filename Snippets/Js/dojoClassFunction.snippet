@@ -16,11 +16,19 @@
          <ToolTip>function name</ToolTip>
     	 <Default>name</Default>
        </Literal>
+       <Literal>
+         <ID>comments</ID>
+         <ToolTip>document your code!</ToolTip>
+         <Default>why did you make this?</Default>
+       </Literal>
      </Declarations>
      <Code Language="jscript">
-       <![CDATA[,$function: function(){
-         console.log(this.declaredClass + "::" + arguments.callee.nom+"::"+arguments);
-},]]>
+       <![CDATA[,
+
+    //$comments$
+    $function$: function () {
+        console.log(this.declaredClass + "::" + arguments.callee.nom + "::" + arguments);
+    }]]>
      </Code>
    </Snippet>
  </CodeSnippet>
