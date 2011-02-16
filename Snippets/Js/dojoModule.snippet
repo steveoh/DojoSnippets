@@ -1,0 +1,33 @@
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+ <CodeSnippet Format="1.1.0">
+   <Header>
+     <SnippetTypes>
+       <SnippetType>Expansion</SnippetType>
+     </SnippetTypes>
+     <Title>dojo: Create a new module template.</Title>
+     <Author>Steve Gourley (@steveAGRC)</Author>
+     <Shortcut>dojoModule</Shortcut>
+     <HelpUrl>http://dojotoolkit.org</HelpUrl>
+   </Header>
+   <Snippet>
+     <Declarations>
+       <Literal>
+         <ID>namespace</ID>
+         <ToolTip>Module namespace</ToolTip>
+         <Default>My.Modules</Default>
+       </Literal>
+       <Literal>
+         <ID>function</ID>
+         <ToolTip>Module Function</ToolTip>
+    	 <Default>method</Default>
+       </Literal>
+     </Declarations>
+     <Code Language="jscript">
+       <![CDATA[$namespace$.$function$ = function() {
+       console.log("$namespace$.$function$");
+    
+       };]]>
+     </Code>
+   </Snippet>
+ </CodeSnippet>
+</CodeSnippets>
