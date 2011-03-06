@@ -1,0 +1,37 @@
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+ <CodeSnippet Format="1.1.0">
+   <Header>
+     <SnippetTypes>
+       <SnippetType>Expansion</SnippetType>
+     </SnippetTypes>
+     <Title>dojoComment</Title>
+     <Author>Steve Gourley (@steveAGRC)</Author>
+     <Shortcut>djCommentProp</Shortcut>
+   </Header>
+   <Snippet>
+<Declarations>
+                <Literal>
+                    <ID>propName</ID> 
+                    <ToolTip>the property you are commenting</ToolTip> 
+                    <Default></Default> 
+                </Literal>
+                <Literal>
+                    <ID>type</ID> 
+                   <ToolTip>the type Boolean number Property  Bag</ToolTip> 
+                    <Default>String</Default> 
+                </Literal>
+                <Literal>
+                    <ID>description</ID> 
+                   <ToolTip>the description of the property</ToolTip> 
+                    <Default>i am a property</Default> 
+                </Literal>
+            </Declarations>
+     <Code Language="jscript">
+       <![CDATA[// $propName$: $type$
+//		$description$
+       
+       ]]>
+     </Code>
+   </Snippet>
+ </CodeSnippet>
+</CodeSnippets>
