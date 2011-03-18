@@ -31,8 +31,32 @@
         <![CDATA[dojo.provide('$namespace$.$class$');
       
 dojo.declare('$namespace$.$class$', [$inherit$], {
-    // summary:
-    // example:
+	// description:
+	//		**Summary**:
+	//		<p>
+	//		**Owner(s)**: Steve Gourley
+	//		</p>
+	//		<p>
+	//		**Test Page**: <a href='/tests/dojo/agrc/1.0/agrc/widgets/tests/$class$Tests.html' target='_blank'>$namespace$.$class$.Test</a>
+	//		</p>
+	//		<p>
+	//		**Description**:
+	//		
+	//		</p>
+	//		<p>
+	//		**Published Channels/Events**:
+	//		</p>
+	//		<ul><li>None</li></ul>
+	//		<p>
+	//			**Exceptions**:
+	//		</p>
+	//		<ul><li>None</li></ul>
+	//		<p>
+	//		**Required Files**:
+	//		</p>
+	//		<ul><li>None</li></ul>
+	// example:
+	// |	
     
     //must be true if you have dijits in your template string
     widgetsInTemplate: true,
@@ -40,27 +64,29 @@ dojo.declare('$namespace$.$class$', [$inherit$], {
     //location of widget template
     templateString: dojo.cache("$namespace$.", "templates/$class$Template.htm"),
 
-    //Your constructor method will be called before the parameters are mixed into the widget, 
-    //and can be used to initialize arrays, etc.
-    constructor: function (params) {
+    constructor: function (args) {
+        // summary:
+        //		Constructor function for object. 
+        // args: Object?
+        //		The parameters that you want to pass into the object. Includes: 
         console.log(this.declaredClass + "::" + arguments.callee.nom);
     },
     
-    //If you provide a postMixInProperties method for your widget, 
-    //it will be invoked before rendering occurs, and before any dom nodes are created. 
-    //If you need to add or change the instance's properties before the widget is rendered - 
-    //this is the place to do it.
     postMixInProperties: function()
     {
+        // summary:
+        //		Massage mixed in values
+        // description:
+        //		
         console.log(this.declaredClass + "::" + arguments.callee.nom);
         this.inherited(arguments);
     }, 
     
-    //This is typically the workhorse of a custom widget. 
-    //The widget has been rendered (but note that sub-widgets in the containerNode have not!). 
-    //The widget though may not be attached to the DOM yet so you shouldn't do
-    //any sizing calculations in this method.
     postCreate: function () {
+        // summary:
+        //		Sets up the widget
+        // description:
+        //		
         console.log(this.declaredClass + "::" + arguments.callee.nom);
         this.inherited(arguments);
    }
