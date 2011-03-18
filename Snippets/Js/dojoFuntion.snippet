@@ -6,11 +6,37 @@
      </SnippetTypes>
      <Title>dojoSnippet</Title>
      <Author>Steve Gourley (@steveAGRC)</Author>
-     <Shortcut>djSnippet</Shortcut>
+     <Shortcut>djFunction</Shortcut>
    </Header>
    <Snippet>
+     <Declarations>
+       <Literal>
+         <ID>function</ID>
+         <ToolTip>function name</ToolTip>
+         <Default>name</Default>
+       </Literal>
+       <Literal>
+         <ID>param</ID>
+         <ToolTip>parameters</ToolTip>
+         <Default> </Default>
+       </Literal>
+       <Literal>
+         <ID>summary</ID>
+         <ToolTip>what does the function do?</ToolTip>
+         <Default>I am an awesome function</Default>
+       </Literal>
+       <Literal>
+         <ID>type</ID>
+         <ToolTip>param type</ToolTip>
+         <Default>String</Default>
+       </Literal>
+       <Literal>
+         <ID>description</ID>
+         <ToolTip>what does the param do?</ToolTip>
+         <Default>cool stuff</Default>
+       </Literal>
      <Code Language="jscript">
-       <![CDATA[$name$: function ($param$) {
+       <![CDATA[$function$: function ($param$) {
 		// summary:
 		//		$summary$
 		// $param$: $type$
