@@ -1,42 +1,43 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
- <CodeSnippet Format="1.1.0">
-   <Header>
-     <SnippetTypes>
-       <SnippetType>Expansion</SnippetType>
-     </SnippetTypes>
-     <Title>dojoSnippet</Title>
-     <Author>Steve Gourley (@steveAGRC)</Author>
-     <Shortcut>djFunction</Shortcut>
-   </Header>
-   <Snippet>
-     <Declarations>
-       <Literal>
-         <ID>function</ID>
-         <ToolTip>function name</ToolTip>
-         <Default>name</Default>
-       </Literal>
-       <Literal>
-         <ID>param</ID>
-         <ToolTip>parameters</ToolTip>
-         <Default> </Default>
-       </Literal>
-       <Literal>
-         <ID>summary</ID>
-         <ToolTip>what does the function do?</ToolTip>
-         <Default>I am an awesome function</Default>
-       </Literal>
-       <Literal>
-         <ID>type</ID>
-         <ToolTip>param type</ToolTip>
-         <Default>String</Default>
-       </Literal>
-       <Literal>
-         <ID>description</ID>
-         <ToolTip>what does the param do?</ToolTip>
-         <Default>cool stuff</Default>
-       </Literal>
-     <Code Language="jscript">
-       <![CDATA[$function$: function ($param$) {
+  <CodeSnippet Format="1.1.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>dojoSnippet</Title>
+      <Author>Steve Gourley (@steveAGRC)</Author>
+      <Shortcut>djFunction</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>function</ID>
+          <ToolTip>function name</ToolTip>
+          <Default>name</Default>
+        </Literal>
+        <Literal>
+          <ID>param</ID>
+          <ToolTip>parameters</ToolTip>
+          <Default> </Default>
+        </Literal>
+        <Literal>
+          <ID>summary</ID>
+          <ToolTip>what does the function do?</ToolTip>
+          <Default>I am an awesome function</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>param type</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>description</ID>
+          <ToolTip>what does the param do?</ToolTip>
+          <Default>cool stuff</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="jscript">
+        <![CDATA[$function$: function ($param$) {
 		// summary:
 		//		$summary$
 		// $param$: $type$
@@ -44,7 +45,7 @@
         console.log(this.declaredClass + "::" + arguments.callee.nom);
     }
        ]]>
-     </Code>
-   </Snippet>
- </CodeSnippet>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
 </CodeSnippets>
