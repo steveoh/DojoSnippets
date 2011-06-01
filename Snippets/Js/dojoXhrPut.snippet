@@ -1,23 +1,41 @@
-?<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
  <CodeSnippet Format="1.1.0">
    <Header>
      <SnippetTypes>
        <SnippetType>Expansion</SnippetType>
      </SnippetTypes>
-     <Title>dojoXhrPut</Title>
+     <Title>dojo: create an xhr putrequest</Title>
      <Author>Steve Gourley (@steveAGRC)</Author>
-     <Shortcut>djPut</Shortcut>
+     <Shortcut>djxhrPut</Shortcut>
    </Header>
    <Snippet>
+<Declarations>
+       <Literal>
+         <ID>url</ID>
+         <ToolTip>url to handle put</ToolTip>
+         <Default>this.updateUrl</Default>
+       </Literal>
+       <Literal>
+         <ID>success</ID>
+         <ToolTip>handles a successful put request</ToolTip>
+     <Default>_onUpdateSuccess</Default>
+       </Literal>
+       <Literal>
+         <ID>error</ID>
+         <ToolTip>handles a unsuccessful put request</ToolTip>
+     <Default>_onError</Default>
+       </Literal>
+     </Declarations>
      <Code Language="jscript">
        <![CDATA[var deferred = dojo.xhrPut({
-        url: "",
-        content: {},
-        timeout: 60000,
-        handleAs: 'json'
-    });
+url: $url$,
+headers: { 'Content-Type': 'application/json; charset=utf-8' },
+handleAs: 'json',
+putData: dojo.toJson()
+});
 
-    deferred.addCallbacks('success', 'error');
+deferred.addCallbacks(dojo.hitch(this, "$success$"), dojo.hitch(this, "$error$"));
+       
        ]]>
      </Code>
    </Snippet>
