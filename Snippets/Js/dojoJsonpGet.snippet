@@ -1,0 +1,41 @@
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+ <CodeSnippet Format="1.1.0">
+   <Header>
+     <SnippetTypes>
+       <SnippetType>Expansion</SnippetType>
+     </SnippetTypes>
+     <Title>dojo: create an io.script.get request</Title>
+     <Author>Steve Gourley (@steveAGRC)</Author>
+     <Shortcut>djjsonpGet</Shortcut>
+   </Header>
+   <Snippet>
+<Declarations>
+       <Literal>
+         <ID>url</ID>
+         <ToolTip>url to handle request</ToolTip>
+         <Default>this.url</Default>
+       </Literal>
+       <Literal>
+         <ID>success</ID>
+         <ToolTip>handles a successful get request</ToolTip>
+     <Default>_onGetSuccess</Default>
+       </Literal>
+       <Literal>
+         <ID>error</ID>
+         <ToolTip>handles a unsuccessful get request</ToolTip>
+     <Default>_onError</Default>
+       </Literal>
+     </Declarations>
+     <Code Language="jscript">
+       <![CDATA[var deferred = dojo.io.script.get({
+url: $url$,
+callbackParamName: 'callback',
+handleAs: 'json',
+content: { '': }
+});
+
+dojo.when(deferred, dojo.hitch(this, '$success$'), dojo.hitch(this, '$error$'));]]>
+     </Code>
+   </Snippet>
+ </CodeSnippet>
+</CodeSnippets>
