@@ -31,7 +31,7 @@
 url: $url$,
 headers: { 'Content-Type': 'application/json; charset=utf-8' },
 handleAs: 'json',
-putData: dojo.toJson()
+content: { "": }
 });
 
 deferred.addCallbacks(dojo.hitch(this, "$success$"), dojo.hitch(this, "$error$"));

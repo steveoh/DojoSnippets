@@ -30,12 +30,10 @@
        <![CDATA[var deferred = dojo.xhrGet({
 url: $url$,
 handleAs: 'json',
-content: { "": }
+content: { '': }
 });
 
-deferred.addCallbacks(dojo.hitch(this, "$success$"), dojo.hitch(this, "$error$"));
-       
-       ]]>
+dojo.when(deferred, dojo.hitch(this, '$success$'), dojo.hitch(this, '$error$'));]]>
      </Code>
    </Snippet>
  </CodeSnippet>

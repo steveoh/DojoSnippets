@@ -29,13 +29,13 @@
      <Code Language="jscript">
        <![CDATA[var deferred = dojo.xhrPost({
 url: $url$,
-form: "",
+form: '',
 handleAs: 'json',
 contentType: 'application/json; charset=utf-8',
-content: 
+content: { '': }
 });
 
-deferred.addCallbacks(dojo.hitch(this, "$success$"), dojo.hitch(this, "$error$"));]]>
+dojo.when(deferred, dojo.hitch(this, '$success$'), dojo.hitch(this, '$error$'));]]>
      </Code>
    </Snippet>
  </CodeSnippet>

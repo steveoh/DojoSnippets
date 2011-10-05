@@ -64,13 +64,15 @@ dojo.declare('$namespace$.$class$', [$inherit$], {
         // args: Object?
         //		The parameters that you want to pass into the object. Includes: id,
         //		position.
-        console.log(this.declaredClass + "::" + arguments.callee.nom);
+        console.info(this.declaredClass + "::" + arguments.callee.nom);
+        
     },
     
     postMixInProperties: function()
     {
-        console.log(this.declaredClass + "::" + arguments.callee.nom);
+        console.info(this.declaredClass + "::" + arguments.callee.nom);
         this.inherited(arguments);
+        
     }, 
     
     postCreate: function () {
@@ -78,8 +80,9 @@ dojo.declare('$namespace$.$class$', [$inherit$], {
         //		Sets up the widget
         // description:
         //			
-        console.log(this.declaredClass + "::" + arguments.callee.nom);
+        console.info(this.declaredClass + "::" + arguments.callee.nom);
         this.inherited(arguments);
+        
    }
 });]]>
       </Code>
